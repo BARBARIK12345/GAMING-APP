@@ -1,28 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Navbar from './component/Navbar'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import Navbar from "./component/NavBar";
+import { Button, Grid, GridItem, Show,  } from "@chakra-ui/react";
+import NavBar from "./component/NavBar";
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <>
+      <Grid
+       
+        templateAreas={
+      //     {
+      //     base: `"nav" "main"` ,
+      //     lg : `"nav nav" "aside main"`,
+      // }}
+        
+      //   templateColumns={{
+      //     base: '1fr',
+      //     lg: '70vw 1fr',
+      //   }}
 
-      <Navbar/>
-
-
-
-
-
-
-
-
-
-
-
-
+        `"nav nav"
+        "aside main"
+         "aside main"`}
+        gridTemplateRows={'5rem 1fr 20rem'}
+        // gridTemplateColumns={''}
+        w={'100vw'}
+      >
+        <GridItem  bg="orange.300" area={"nav"}>
+          Navbar
+          <NavBar />
+        </GridItem>
+        
+        <GridItem  bg="pink.300" area={"aside"}>
+          Aside 
+        </GridItem>
+        
+        <GridItem  bg="green.300" area={"main"}>
+          Main
+        </GridItem>
+      </Grid>
 
       {/* <div>
         <a href="https://vitejs.dev" target="_blank">
@@ -44,8 +65,9 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p> */}
+    
     </>
-  )
+  );
 }
 
-export default App
+export default App;
