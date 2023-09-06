@@ -5,6 +5,7 @@ import "./App.css";
 import Navbar from "./component/NavBar";
 import { Button, Grid, GridItem, Show,  } from "@chakra-ui/react";
 import NavBar from "./component/NavBar";
+import GameGrid from "./component/GameGrid";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -30,18 +31,19 @@ function App() {
         gridTemplateRows={'5rem 1fr 20rem'}
         // gridTemplateColumns={''}
         w={'100vw'}
+        gap={'1px'}
       >
-        <GridItem  bg="orange.300" area={"nav"}>
-          Navbar
+        <GridItem   area={"nav"}>
+          
           <NavBar />
         </GridItem>
         
-        <GridItem  bg="pink.300" area={"aside"}>
+        <GridItem   area={"aside"}>
           Aside 
         </GridItem>
         
-        <GridItem  bg="green.300" area={"main"}>
-          Main
+        <GridItem   area={"main"}>
+          <GameGrid/>
         </GridItem>
       </Grid>
 
