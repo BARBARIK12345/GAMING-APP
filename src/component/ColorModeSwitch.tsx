@@ -9,7 +9,7 @@ function ColorModeSwitch() {
     <div>
       
       <HStack>
-        <Switch isChecked={colorMode== 'dark'} onChange={toggleColorMode}/>
+        <Switch isChecked={colorMode === 'dark'} onChange={toggleColorMode}/>
         <Text>Dark Mode</Text>
       </HStack>
 
