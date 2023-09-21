@@ -6,7 +6,7 @@ import { AxiosRequestConfig, CanceledError } from "axios";
 
 interface FetchResponse <T>{
     count : number;
-    result : T[];
+    results : T[];
 } 
 
 const useGenres = <T>(endpoint: string, requestConfig?: AxiosRequestConfig , deps?: any[]) => {
